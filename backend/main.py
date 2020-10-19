@@ -12,7 +12,7 @@ def index(path):
 
 @app.route("/api/test")
 def test():
-      return "TEST"
+      return "TEST123"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, threaded=True, debug=True)
