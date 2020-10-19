@@ -12,8 +12,8 @@ RUN cd frontend && yarn install && yarn build
 RUN pwd && ls
 RUN pip3 install -r backend/requirements.txt
 
-EXPOSE 5000
+EXPOSE 80
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "main.py" ]
+CMD [ "backend/main.py" ]

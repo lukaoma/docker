@@ -1,9 +1,9 @@
 version: "3.8"
 services:
-  dockerSWE:
+  dockerfun:
     build: ./
     container_name: docker-container
     ports:
-      - 5000:5000
+      - 80:80
     expose:
-      - 5000
+      - 80
