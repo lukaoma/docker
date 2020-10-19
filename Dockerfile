@@ -11,9 +11,8 @@ RUN ls && pwd
 RUN cd frontend && yarn install && yarn build
 RUN pwd && ls
 RUN pip3 install -r backend/requirements.txt
+RUN git pull --force
 
 EXPOSE 80
 
-ENTRYPOINT [ "python" ]
-
-CMD [ "backend/main.py" ]
+CMD git pull --force && python3 backend/main.py
