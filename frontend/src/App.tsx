@@ -1,8 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import useAxios from 'axios-hooks'
 
 function App() {
+
+const[{data}]= useAxios("/api/test");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +20,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {data}
         </a>
       </header>
     </div>
